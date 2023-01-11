@@ -21,6 +21,17 @@ export default defineConfig({
     },
   },
 
+  css: {
+    preprocessorOptions: {
+      scss: {
+        additionalData: `$injectedColor: orange;`,
+      },
+      styl: {
+        additionalData: `$injectedColor ?= orange`,
+      },
+    },
+  },
+
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "src"),
