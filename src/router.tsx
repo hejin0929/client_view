@@ -1,4 +1,5 @@
 import Home from "./pages/home";
+import Test from "./pages/test";
 import {
   createBrowserRouter,
   RouterProvider,
@@ -10,6 +11,10 @@ const RouterRoot = createBrowserRouter([
   {
     path: "/",
     element: <Home />,
+  },
+  {
+    path: "/test",
+    element: <Test />,
   },
 ]);
 
