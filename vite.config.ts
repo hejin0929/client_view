@@ -10,7 +10,7 @@ export default defineConfig({
     port: 8081,
     proxy: {
       "/api": {
-        target: "http://localhost:8081/",
+        target: "http://localhost:8080/",
         // target: 'http://localhost:9200',
         changeOrigin: true,
         rewrite: (path: string) => {
@@ -35,9 +35,9 @@ export default defineConfig({
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "src"),
-      "@myPages": path.resolve(__dirname, "src/view"),
+      "@myPages": path.resolve(__dirname, "src/pages"),
       "@store": path.resolve(__dirname, "src/store"),
-      "@widgets": path.resolve(__dirname, "src/widgets"),
+      "@components": path.resolve(__dirname, "src/components"),
     },
   },
 });
